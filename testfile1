@@ -1,0 +1,17 @@
+pipeline {
+    agent any
+    stages {
+        stage("firstStage"){
+            steps {
+                echo "Hello World1"
+                sudo apt-get install pip3
+                sh "python --version"
+            }
+        }
+        stage("secondStage"){
+            steps {
+                sh "echo 'hello world 2'"
+            }
+        }
+    }
+}
