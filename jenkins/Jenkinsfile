@@ -4,8 +4,9 @@ pipeline {
         stage("firstStage"){
             steps {
                 sh "echo 'Hello World1'"
-                sh "apt-get install pip3"
-                sh "python --version"
+                sh "python3 --version"
+                sh "echo print('Hello World inside python file') >> myfile.py"
+                sh "python3 myfile.py"
             }
         }
         stage("secondStage"){
