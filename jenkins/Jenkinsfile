@@ -5,7 +5,7 @@ pipeline {
             steps {
                 sh "echo 'Hello World1'"
                 sh "python3 --version"
-                sh "echo print('Hello World inside python file') >> myfile.py"
+                sh "echo print(\"Hello World inside python file\") >> myfile.py"
                 sh "python3 myfile.py"
             }
         }
