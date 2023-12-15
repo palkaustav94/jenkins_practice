@@ -3,8 +3,8 @@ pipeline {
     stages {
         stage("firstStage"){
             steps {
-                echo "Hello World1"
-                sudo apt-get install pip3
+                sh "echo "Hello World1""
+                sh "sudo apt-get install pip3"
                 sh "python --version"
             }
         }
